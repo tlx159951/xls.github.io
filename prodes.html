@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>小螺丝</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="css/amazeui.min.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/idangerous.swiper.min.js"></script>
+  <script>
+  $(function(){
+     $('.prodes-inf a').height(0.3*$('.prodes-inf a').width());
+     $('.prodes-inf a').css({"line-height":0.3*$('.prodes-inf a').width()+"px"})
+     $('.prodes-inf a').each(function(index){
+      $(this).on('click',function() {
+        $(this).addClass("on").siblings().removeClass('on');
+        $('.prodes-content').eq(index).addClass("prodes-content-on").siblings().removeClass('prodes-content-on');  
+        });
+     });
+
+     
+     $('.prolist').each(function(){
+      $(this).children("span").on('click',function(){
+        $(this).addClass('on').siblings().removeClass('on');
+      });
+     });
+     
+     var iCount=1;
+     $('.prodes-cho-bottom .countred').on('click',function(){
+       iCount=$('.prodes-cho-bottom .count').html();
+       if(iCount>1)
+       {
+        iCount--;
+       }
+       $('.prodes-cho-bottom .count').html(iCount);
+     });
+
+     $('.prodes-cho-bottom .countadd').on('click',function(){
+       iCount=$('.prodes-cho-bottom .count').html();
+       iCount++;
+       $('.prodes-cho-bottom .count').html(iCount);
+     });
+
+     $('.prodes-bg').on('click',function(){
+       $('.prodes-bg').addClass('prodes-bg-hide');
+       $('.prodes-cho').addClass('prodes-cho-hide');
+       $('.add-hide').removeClass('add-on');
+       $('.buy-hide').removeClass('buy-on');
+     });
+
+     $('.add').on('click',function(){
+       $('.prodes-bg').removeClass('prodes-bg-hide');
+       $('.prodes-cho').removeClass('prodes-cho-hide');
+       $('.add-hide').addClass('add-on');
+     });
+
+     $('.buy').on('click',function(){
+       $('.prodes-bg').removeClass('prodes-bg-hide');
+       $('.prodes-cho').removeClass('prodes-cho-hide');
+       $('.buy-hide').addClass('buy-on');
+     });
+
+     $('.prodes-buy .collect').on('click',function(){
+      if($(this).hasClass('collect-on')){
+       $(this).removeClass('collect-on'); 
+      }
+      else{
+       $(this).addClass('collect-on');
+      }
+    })
+  })
+  </script>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="am-g fam-nav"> 
+  <a href="index.html"><返回</a>
+  <h2>商品详情</h2>  
+</div>
+<!-- 导航栏 -->
+
+<!-- 图文描述 -->
+<div class="am-g prodes-des">
+  <img src="images/prodes_banner1.png" alt="prodes_banner1.png">
+  <p>亚麻椅子：超美欧洲实用风格，适合喜爱海派风格的你</p>
+  <h1>￥128</h1>
+  <h2>库存：100</h2>
+</div>
+
+<script>
+      $('.prodes-des').height(0.77*$('.prodes-des').width());
+</script>
+<!-- 图文描述 -->
+
+<!-- 间隔 -->
+<div class="am-g prodes-interval bg-f2"></div>
+<!-- 间隔 -->
+
+<!-- 商品信息 -->
+<div class="am-g prodes-inf">
+  <a class="on" href="javascprit:">商品详情</a>
+  <a href="javascprit:">商品评价</a>
+</div>
+
+
+<div class="am-g prodes-content prodes-content-on">
+  <div class="prodes-spec prodes-spec-bb">
+    <h1>规格参数</h1>
+    <pre>
+材质：
+尺寸：
+等等参数：此处不作具体编辑设置，运营自行编辑
+信息
+    </pre>
+  </div>
+  <div class="prodes-spec">
+    <h1>图文信息</h1>
+    <pre>
+处不作具体编辑设置，运营自行编辑信息，可以插入
+文字与照片
+    </pre>
+  </div>
+</div>
+
+<div class="am-g prodes-content">
+  <ul>
+    <li class="prodes-user">
+      <div class="comment-comlist">
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+      </div>
+      <div class="icon1"></div>
+      <h1>用户1</h1>
+      <p>不错！干活很细，给个好评</p>
+      <h2>1天前</h2>
+    </li>
+    <li class="prodes-user">
+      <div class="comment-comlist">
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+        <a href="javascrpit:" class="on"></a>
+      </div>
+      <div class="icon1"></div>
+      <h1>用户1</h1>
+      <p>不错！干活很细，给个好评</p>
+      <h2>1天前</h2>
+    </li>
+  </ul>
+</div>
+<!-- 商品信息 -->
+
+<!-- 底部 -->
+<div class="am-g prodes-tc"></div>
+<div class="am-g prodes-buy">
+  <a href="javascprit:" class="add-hide">加入购物车</a>
+  <a href="javascprit:" class="buy-hide">立即购买</a>
+  <a href="javascprit:" class="add">加入购物车</a>
+  <a href="javascprit:" class="buy">立即购买</a>
+  <span class="collect"></span>
+</div>
+
+<div class="am-g prodes-cho prodes-cho-hide">
+  <div class="prodes-cho-top">
+    <p>亚麻椅子：超美欧洲实用风格，适合喜爱海派风格的你</p>
+    <h1>￥128</h1>
+  </div>
+  <div class="prodes-cho-bottom">
+    <p>款式：</p><div class="prolist"><span class="on">长款</span><span>短款</span></div>
+    <div></div>
+    <p>颜色：</p><div class="prolist"><span class="on">蓝色</span><span>红色</span></div>
+    <p>款式：</p><div class="prolist"><span class="on">1mm</span><span>2mm</span><span>3mm</span><span>4mm</span><span>5mm</span><span>6mm</span><span>7mm</span></div>
+    <p class="countsel">数量：<span class="countred">-</span><span class="count">1</span><span class="countadd">+</span></p>
+  </div>
+  <h2>库存：100</h2>
+</div>
+
+<div class="am-g prodes-bg prodes-bg-hide"></div>
+<!-- 底部 -->
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js bg-f2">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>小螺丝</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="css/amazeui.min.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/idangerous.swiper.min.js"></script>
+  <script>
+
+  $(function(){
+    $('.refund').each(function(){
+      $(this).on('click',function(){
+        $('#refundconfirm').removeClass('weui_dialog_confirm_hide');
+        $('#refundconfirm .confirm').on('click',function(){
+          $('#refundconfirm').addClass('weui_dialog_confirm_hide');
+        });
+        $('#refundconfirm .cancel').on('click',function(){
+          $('#refundconfirm').addClass('weui_dialog_confirm_hide');
+          $('#refundconfirm .confirm').off();
+        });
+      });
+    });
+
+    $('.receipt').each(function(){
+      $(this).on('click',function(){
+        $('#receiptconfirm').removeClass('weui_dialog_confirm_hide');
+        $('#receiptconfirm .confirm').on('click',function(){
+          $('#receiptconfirm').addClass('weui_dialog_confirm_hide');
+        });
+        $('#receiptconfirm .cancel').on('click',function(){
+          $('#receiptconfirm').addClass('weui_dialog_confirm_hide');
+          $('#receiptconfirm .confirm').off();
+        });
+      });
+    });
+
+    $('.comment').each(function(){
+      $(this).on('click',function(){
+        window.location.href="comment.html?id="+$(this).attr('id');
+      });
+    });
+  })
+  
+  </script>
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="am-g fam-nav"> 
+  <a href="#"><返回</a>
+  <h2>订单页面</h2>  
+</div>
+<!-- 导航栏 -->
+
+<!-- 订单列表 -->
+<div class="am-g shopcart-list orderlist">
+  <img src="" alt="">
+  <div class="font">
+    <h1>商品名称</h1>
+    <p>规格：</p>
+    <p>13*16 高 黄</p>
+  </div>
+  <h2 class="price">￥<p class="priceli">998</p></h2>
+  <span>待发货</span>
+</div>
+<div class="am-g orderlist-price">
+  <p>共1件商品</p>
+  <p>合计：￥<span class="price">998</span>（含运费）</p>
+  <span class="status status1 refund">退款</span>
+  <span class="status status2 receipt">确认收货</span>
+</div>
+<div class="am-g orderlist-price">
+  <p>物流信息</p>
+  <p>中通：XXXXXXXXX 或 送货上门</p>
+</div>
+
+<div class="am-g shopcart-list orderlist">
+  <img src="" alt="">
+  <div class="font">
+    <h1>商品名称</h1>
+    <p>规格：</p>
+    <p>13*16 高 黄</p>
+  </div>
+  <h2 class="price">￥<p class="priceli">998</p></h2>
+  <span>待发货</span>
+</div>
+<div class="am-g orderlist-price">
+  <p>共1件商品</p>
+  <p>合计：￥<span class="price">998</span>（含运费）</p>
+  <span class="status status1 refund">退款</span>
+  <span class="status status2 comment" id="1">评价</span>
+</div>
+<div class="am-g orderlist-price">
+  <p>物流信息</p>
+  <p>中通：XXXXXXXXX 或 送货上门</p>
+</div>
+<!-- 订单列表 -->
+
+
+
+<!-- 删除确认 -->
+<div class="weui_dialog_confirm weui_dialog_confirm_hide" id="refundconfirm">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">退款确认</strong></div>
+        <div class="weui_dialog_bd">是否确认退款？</div>
+        <div class="weui_dialog_ft">
+             <a href="javascript:;" class="weui_btn_dialog primary confirm">确定</a>
+            <a href="javascript:;" class="weui_btn_dialog default cancel">取消</a> 
+        </div>
+    </div>
+</div>
+
+<div class="weui_dialog_confirm weui_dialog_confirm_hide" id="receiptconfirm">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">收货确认</strong></div>
+        <div class="weui_dialog_bd">是否确认收货？</div>
+        <div class="weui_dialog_ft">
+             <a href="javascript:;" class="weui_btn_dialog primary confirm">确定</a>
+            <a href="javascript:;" class="weui_btn_dialog default cancel">取消</a> 
+        </div>
+    </div>
+</div>
+<!-- 删除确认 -->
+</body>
+</html>

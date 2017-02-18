@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>小螺丝</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="css/amazeui.min.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/amazeui.min.js"></script>
+  <script src="js/idangerous.swiper.min.js"></script>
+  <script>
+  $(function(){
+    $('#demo').swiper({
+      pagination: '#demo .swiper-pagination',
+      paginationClickable: true,
+      autoplay:3000
+    });
+
+    $('#demo2').swiper({
+      scrollContainer:true,
+      momentumBounce:false,
+    });
+
+
+    $('.demo').height(0.6*$('.demo').width());
+    $('.demo p').css({'bottom':0.4*$('.demo img').height()});
+    $('.demo img').css({'margin-top':(0.6*$('.demo').width()-$('.demo img').height())});
+    $('.squ-navlist1').height(0.5*$('.squ-navlist1').width());
+    $('.squ-navlist2').height(0.5*$('.squ-navlist2').width());
+    $('.big-nav').height(0.4*$('.big-nav').width());
+    $('.big-nav a').height(0.4*$('.big-nav').width());
+    
+
+    $('.icon1').on('click',function(){
+    	window.location.href="result.html?content="+$('.index-top input').val();
+    })
+    // $('.pro-cho .swiper-wrapper').width($('.pro-cho ul>li').length*$('.pro-cho ul>li').eq(0).outerWidth(true)+10);
+    
+    
+  })
+  </script>
+</head>
+<body>
+
+
+<!-- 顶部 -->
+<div class="index-top">
+	<a href="javascript:" class="icon1"></a>
+		<input type="text" placeholder="搜索商品">
+	<a href="shopcart.html" class="icon2">
+	    <img src="images/index_icon2.png" alt="shopcart">
+	    <span class="count">3</span>
+	    <span class="font">购物车</span> 
+  	</a>
+</div>
+<!-- 顶部 -->
+
+<!-- 轮播图 -->
+<div class="swiper-container demo" id="demo">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="images/index_banner1.jpg" style="width:100%;" ><p>海派家居——春日里的旅行</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="images/index_banner1.jpg" style="width:100%;" ><p>海派家居——春日里的旅行</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="images/index_banner1.jpg" style="width:100%;" ><p>海派家居——春日里的旅行</p></a></div>
+    <div class="swiper-slide"><a href="#"><img src="images/index_banner1.jpg" style="width:100%;" ><p>海派家居——春日里的旅行</p></a></div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination">
+  </div>
+</div>
+<!-- 轮播图 -->
+
+<!-- 圈导航 -->
+<div class="am-g cir-nav">
+  <ul>
+    <li>
+      <a class="bg1" href="famous.html"></a>
+      <span>名室风范</span>
+    </li>
+    <li>
+      <a class="bg2" href="product.html"></a>
+      <span>产品推荐</span>
+    </li>
+    <li>
+      <a class="bg3" href="special.html"></a>
+      <span>专题推荐</span>
+    </li>
+    <li>
+      <a class="bg4" href="decorate.html"></a>
+      <span>装修贴士</span>
+    </li>
+  </ul> 
+</div>
+<!-- 圈导航 -->
+
+<!-- 方导航 -->
+<div class="am-g squ-nav">
+  <a class="squ-navlist1" href="#"></a>
+  <a class="squ-navlist2" href="#"></a>
+</div>
+<!-- 方导航 -->
+
+<!-- 大导航 -->
+<div class="am-g big-nav">
+  <a href="spesub.html">
+    <div class="big-navcir">
+      <div class="font">
+        <h1>海派家居<p>一一</p></h1>
+        <h2>新家装新体验</h2>
+      </div>
+      <div class="circle"></div>
+    </div>
+  </a>
+</div>
+<!-- 大导航 -->
+
+<!-- 商品选择 -->
+<div class="swiper-container pro-cho"  id="demo2">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <ul>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+        <li>
+          <a class="bg1" href="prodes.html"></a>
+          <span>亚麻椅子</span>
+          <span>￥128</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.pro-cho ul').width($('.pro-cho ul>li').length*$('.pro-cho ul>li').eq(0).outerWidth(true)+10);
+</script>
+<!-- 商品选择 -->
+
+
+<!-- 底部导航 -->
+<div class="am-g bot-tc"></div>
+<div class="am-g bot-nav">
+  <ul>
+    <li>
+      <a class="bg1" href="index.html"></a>
+      <span class="selected">首页</span>
+    </li>
+    <li>
+      <a class="bg2" href="#"></a>
+      <span>自主设计</span>
+    </li>
+    <li>
+      <a class="bg3" href="shop.html"></a>
+      <span>商城</span>
+    </li>
+    <li>
+      <a class="bg4" href="#"></a>
+      <span>帮我装</span>
+    </li>
+    <li>
+      <a class="bg5" href="me.html"></a>
+      <span>我的</span>
+    </li>
+  </ul> 
+</div>
+<!-- 底部导航 -->
+
+
+</body>
+</html>
